@@ -5,6 +5,14 @@
     "author": "Rubens oliveira",
     "type": "module",
     "scripts": {
-        "dev" : "node --watch ./server.ts"
-    }
+        "dev" : "node --watch ./server.ts",
+        "check" : "tsc --noEmit"
+    },
+     "devDependencies": {
+    "typescript": "^7.0.2"
+  } , 
+   "devDependencie": {
+    "@types/node": "^26.6.4"
+  }
+
 }
