@@ -6,7 +6,7 @@
     "type": "module",
     "scripts": {
         "dev" : "node --watch ./server.ts",
-        "check" : "tsc --noEmit"
+        "check" : "tsc"
     },
      "devDependencies": {
     "typescript": "^7.0.2"

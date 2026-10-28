@@ -45,7 +45,19 @@ const invoices: Invoice[] = [
             name: 'Construtora Meridiano',
             email: 'contato@meridiano.com'
         }
-    }
+    },
+    {
+        id: 3,
+        amount: 250037,
+        status: 'pending',
+        issueDate: '2026-10-03',
+        dueDate: '2026-11-03',
+        customer: {
+            id: 7,
+            name: 'Construtora Meridiano',
+            email: 'contato@meridiano.com'
+        }
+    },
 ];
 
 // Verificar se a API está ativa
