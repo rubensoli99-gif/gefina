@@ -3,7 +3,5 @@
 ### Buscar faturas
 GET {{host}}/api/invoices
 
-
 ### Buscar fatura pelo identificador
 GET {{host}}/api/invoices/1
-

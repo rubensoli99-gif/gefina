@@ -1,40 +1,31 @@
-import{ Router }from "express";
+import { Router } from 'express';
 
-import {findALLInvoices,
-    findInvoiceById
- } from "./invoice.service.ts";
+import {
+  findAllInvoices,
+  findInvoiceById
+} from './invoice.service.ts';
 
- const router = Router();
+const router = Router();
 
+router.get('/', (_request, response) => {
+  const invoices = findAllInvoices();
 
-
-// Obter todas as faturas
-router.get('/', (_req , res) => {
-   const invoice = findALLInvoices();
-
-   res.status(200).json(invoice);
-
+  response.status(200).json(invoices);
 });
 
-// Obter uma fatura pelo ID
-router.get(':id', (req, res) => {
-    const id = Number(req.params.id);
+router.get('/:id', (request, response) => {
+  const id = Number(request.params.id);
 
-    const invoice = findInvoiceById(id);
+  const invoice = findInvoiceById(id);
 
-    if (!invoice) {
-        return res.status(404).json({
-            error: {
-                status: 404,
-                message: 'ID da fatura inválido.'
-            }
-        });
+  if (!invoice) response.status(404).json({
+    error: {
+      status: 404,
+      message: 'Fatura não encontrada.'
     }
+  });
 
-   
-    
-
-    res.status(200).json(invoice);
+  response.status(200).json(invoice);
 });
 
-    export default router;
+export default router;
