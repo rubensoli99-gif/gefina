@@ -9,6 +9,16 @@
     "fix:unsafe": "biome check --write --unsafe ./"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.2"
+    "@biomejs/biome": "2.6.2",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   }
 }
